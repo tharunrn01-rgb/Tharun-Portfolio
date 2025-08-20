@@ -250,3 +250,44 @@ input::placeholder, textarea::placeholder{color:rgba(255,255,255,0.45)}
   text-decoration: underline;
   color: #005582;   /* darker blue on hover */
 }
+
+/* --- Certificate Image: Flexible & Scaled --- */
+.cert-item img {
+  display: block;
+  width: 100%;
+  max-width: 300px;   /* Restricts image size on desktop */
+  height: auto;       /* Keeps natural ratio */
+  border-radius: 8px;
+  border: 2px solid rgba(212,175,55,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+  margin: 0 auto;
+}
+
+.cert-item img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 40px rgba(212,175,55,0.12);
+}
+
+/* --- Certificate Caption Styles --- */
+.cert-item figcaption {
+  font-size: .9rem;
+  color: var(--muted);
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 640px) {
+  .cert-item img {
+    max-width: 100%;  /* Fills available width on mobile */
+  }
+
+  .cert-item figcaption {
+    font-size: 0.8rem; /* Slightly smaller text for balance */
+  }
+
+  /* Optional: ensure grid stacks one per row */
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
