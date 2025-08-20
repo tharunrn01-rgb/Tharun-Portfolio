@@ -279,7 +279,7 @@ input::placeholder, textarea::placeholder{color:rgba(255,255,255,0.45)}
 /* --- Mobile Adjustments --- */
 @media (max-width: 640px) {
   .cert-item img {
-    max-width: 100%;  /* Fills available width on mobile */
+    max-width: 80%;  /* Fills available width on mobile */
   }
 
   .cert-item figcaption {
@@ -291,3 +291,4 @@ input::placeholder, textarea::placeholder{color:rgba(255,255,255,0.45)}
     grid-template-columns: 1fr;
   }
 }
+
