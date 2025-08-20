@@ -226,15 +226,20 @@
   <script defer src="script.js"></script>
 
   <script>
+document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.querySelector(".menu-btn");
   const menu = document.querySelector(".menu");
 
-  menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("open");
-  });
+  if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+  }
+});
 </script>
 </body>
 </html>
+
 
 
 
