@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0" >
   <title>Tharun R N — Portfolio</title>
   <meta name="description" content="Portfolio of Tharun R N — Bcom Student." />
   <link rel="stylesheet" href="style.css">
@@ -18,7 +18,7 @@
   <header class="nav-wrap">
     <div class="container nav">
       <a class="brand" href="#home"><span class="dot" aria-hidden="true"></span><span>Tharun R N</span></a>
-      <button id="menuBtn" class="menu-btn" aria-expanded="False" aria-controls="menu">Menu aria-label="Open navigation"</button>
+      <button id="menuBtn" class="menu-btn" aria-expanded="False" aria-controls="menu">Menu</button>
       <ul id="menu" class="menu" role="menu">
         <li role="none"><a role="menuitem" href="#about">About</a></li>
         <li role="none"><a role="menuitem" href="#skills">Skills</a></li>
@@ -224,8 +224,18 @@
   </footer>
 
   <script defer src="script.js"></script>
+
+  <script>
+  const menuBtn = document.querySelector(".menu-btn");
+  const menu = document.querySelector(".menu");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("open");
+  });
+</script>
 </body>
 </html>
+
 
 
 
