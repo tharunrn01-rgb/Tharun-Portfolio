@@ -311,7 +311,7 @@ input::placeholder, textarea::placeholder{color:rgba(255,255,255,0.45)}
     transition: max-height 0.3s ease, padding 0.3s ease;
   }
 
-  .menu.open {
+  .menu.show {
     max-height: 400px;  /* enough to fit all links */
     padding: 14px;
   }
@@ -320,6 +320,7 @@ input::placeholder, textarea::placeholder{color:rgba(255,255,255,0.45)}
     margin: 8px 0;
   }
 }
+
 
 
 
