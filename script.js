@@ -103,7 +103,7 @@ const nameField = document.getElementById('name'); // ?? grab the name input
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    formStatus.textContent = 'Sending…';
+    formStatus.textContent = 'SendingðŸ˜Š';
     const data = new FormData(contactForm);
 
     try {
@@ -121,13 +121,14 @@ if (contactForm) {
         const json = await res.json();
         formStatus.textContent = (json && json.error)
           ? json.error
-          : '? Oops — something went wrong.';
+          : '? Oops â€” something went wrong.';
       }
     } catch (err) {
-      formStatus.textContent = '? Network error — please try again later.';
+      formStatus.textContent = '? Network error â€” please try again later.';
     }
 
     // clear message after 7 seconds
     setTimeout(() => formStatus.textContent = '', 7000);
   });
 }
+
